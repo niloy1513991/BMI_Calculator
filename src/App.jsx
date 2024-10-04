@@ -143,6 +143,7 @@ const App = () => {
             <p>{message}</p>
           </div>
         </form>
+        <div className="text-sm text-center">&copy; niloykumarmohonta</div>
       </div>
     </>
   );
