@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css"; // Import the custom CSS
 
 const App = () => {
   const [weight, setWeight] = useState("");
@@ -58,6 +59,14 @@ const App = () => {
         <form onSubmit={calcBMI}>
           <div className="mb-6">
             <label>Weight</label>
+            <select
+              value={weightUnit}
+              onChange={(e) => setWeightUnit(e.target.value)}
+              className="ml-2 h-10 focus:bg-blue-100 active:bg-blue-200"
+            >
+              <option value="lbs">lbs</option>
+              <option value="kg">kg</option>
+            </select>
             <input
               type="text"
               placeholder="Enter weight value"
@@ -65,21 +74,13 @@ const App = () => {
               onChange={(e) => setWeight(e.target.value)}
               className="ml-2 mt-2 h-10"
             />
-            <select
-              value={weightUnit}
-              onChange={(e) => setWeightUnit(e.target.value)}
-              className="ml-2 h-10"
-            >
-              <option value="lbs">lbs</option>
-              <option value="kg">kg</option>
-            </select>
           </div>
           <div className="mt-10">
             <label>Height</label>
             <select
               value={heightUnit}
               onChange={(e) => setHeightUnit(e.target.value)}
-              className="ml-2 h-10"
+              className="ml-2 h-10 focus:bg-blue-100 active:bg-blue-200"
             >
               <option value="in">Inches</option>
               <option value="ft-in">Feet and Inches</option>
@@ -143,7 +144,6 @@ const App = () => {
             <p>{message}</p>
           </div>
         </form>
-        <div className="text-sm text-center">&copy; niloykumarmohonta</div>
       </div>
     </>
   );

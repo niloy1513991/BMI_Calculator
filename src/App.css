@@ -1,0 +1,16 @@
+/* styles.css */
+select {
+  background-color: white; /* Default background color */
+}
+
+select:focus {
+  background-color: #bfdbfe; /* Tailwind's bg-blue-100 */
+}
+
+select option {
+  background-color: white; /* Default background color for options */
+}
+
+select:focus option {
+  background-color: #bfdbfe; /* Tailwind's bg-blue-100 for options */
+}
