@@ -58,7 +58,7 @@ const App = () => {
         </h2>
         <form onSubmit={calcBMI}>
           <div className="mb-6">
-            <label>Weight</label>
+            <label className="font-bold text-lg">Weight</label>
             <select
               value={weightUnit}
               onChange={(e) => setWeightUnit(e.target.value)}
@@ -76,7 +76,7 @@ const App = () => {
             />
           </div>
           <div className="mt-10">
-            <label>Height</label>
+            <label className="font-bold text-lg">Height</label>
             <select
               value={heightUnit}
               onChange={(e) => setHeightUnit(e.target.value)}
